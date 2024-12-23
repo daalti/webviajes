@@ -1,0 +1,17 @@
+.menu-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item-image {
+  width: max(20vw, 400px);
+  aspect-ratio: 1.8 / 1;
+  border-radius: 0.5rem;
+  margin-top: 0.75rem;
+  object-fit: cover;
+}
+
+.menu-item-link {
+  text-decoration: none;
+  color: #ffffff;
+}
