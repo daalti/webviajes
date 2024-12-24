@@ -12,7 +12,14 @@
 }
 
 .menu-open {
-  height: 50vh;
+  height: 45vh;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.25s linear;
+  cursor: pointer;
 }
 
 .menu-items-container {
@@ -20,6 +27,7 @@
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
+  gap: 40px;
   height: auto;
-  padding: 0;
+  padding: 0px 40px;
 }
