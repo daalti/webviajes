@@ -1,24 +1,26 @@
 .menu-button {
   position: fixed;
-  left: 50%; /* TODO: MIRAR ESTO */
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 30px;
   width: 85px;
   height: 85px;
   border-radius: 50%;
   border: none;
   background-color: #c38133;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-out, background-color 0.5s ease-in-out;
   z-index: 2;
 }
 
 .menu-button:hover {
   cursor: pointer;
-  transform: scale(1.1);
-}
-.menu-button:active {
-  transform: scale(0.9);
+  transform: translateX(-50%) scale(1.1);
 }
 
+.menu-button:active {
+  transform: translateX(-50%) scale(0.9);
+}
 .menu-button-open {
   background-color: #3c4cc7;
 }
