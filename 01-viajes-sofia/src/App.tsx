@@ -84,6 +84,7 @@ function App(): JSX.Element {
 
   const handleMenuButtonClick = (): void => {
     setMenuOpen(!menuOpen);
+    console.log(menuOpen);
   };
 
   return (
