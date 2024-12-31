@@ -31,13 +31,13 @@ export const Menu: React.FC<Props> = ({ menuOpen }: Props) => {
     // Calculate mouse position as a percentage:
     // 0 --> completely to the left
     // 1 --> completely to the right
-    const adjustedMouseX = mouseX - 500;
-    const mouseRatio = adjustedMouseX / (screenWidth - 500);
+    const adjustedMouseX = mouseX - 250;
+    const mouseRatio = adjustedMouseX / (screenWidth - 250);
 
     // "Range" of movement the container can have.
     // For example, if the container measures containerWidth and the screen screenWidth,
     // the maximum displacement (to the left) could be:
-    const maxScroll = containerWidth - screenWidth + 500;
+    const maxScroll = containerWidth - screenWidth + 250;
 
     // Calculate the translation you want:
     // multiply by -1 to "move" the container in the opposite direction,

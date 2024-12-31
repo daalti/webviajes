@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./TripMenu.css";
-import { useAutoScroll } from "./hooks/useAutoScroll";
+import { useAutoScroll } from "../hooks/useAutoScroll";
 
 interface Image {
   src: string;

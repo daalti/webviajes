@@ -18,7 +18,7 @@
 .menu-items {
   display: flex;
   flex-direction: row;
-  transition: transform 0.25s linear;
+  transition: transform 0.1s linear;
   cursor: pointer;
 }
 
