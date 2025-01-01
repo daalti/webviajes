@@ -8,6 +8,14 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.5s ease-in-out, visibility 1.5s ease-in-out;
+}
+
+.trip-filter-menu-wrapper.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .trip-filter-menu-container {
@@ -18,7 +26,7 @@
   transition: height 0.5s ease-in-out;
 }
 
-.trip-filter-menu-container ul {
+.trip-filter-menu {
   list-style-type: none;
   padding: 0; /* Optional: remove default padding */
   margin: 0; /* Optional: remove default margin */

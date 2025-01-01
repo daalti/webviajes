@@ -30,7 +30,7 @@ export const TripFilter: React.FC<Props> = ({
           </div>
         </div>
       )}
-      {filterButton && <TripFilterMenu />}
+      <TripFilterMenu filterButton={filterButton} />
     </>
   );
 };

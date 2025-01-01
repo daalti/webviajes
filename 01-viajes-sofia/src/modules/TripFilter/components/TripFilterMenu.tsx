@@ -27,9 +27,15 @@ const trips = [
   },
 ];
 
-export const TripFilterMenu: React.FC = () => {
+interface Props {
+  filterButton: boolean;
+}
+
+export const TripFilterMenu: React.FC<Props> = ({ filterButton }: Props) => {
   return (
-    <div className="trip-filter-menu-wrapper">
+    <div
+      className={`trip-filter-menu-wrapper ${filterButton ? "visible" : ""}`}
+    >
       <div className="trip-filter-menu-container">
         <ul className="trip-filter-menu">
           {trips.map((trip) => (
