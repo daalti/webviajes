@@ -89,29 +89,29 @@ export const useAutoScroll = (
     console.log("handleScroll");
     console.log(window.innerHeight);
     const scrolled = window.scrollY;
-    const columns = document.querySelectorAll(".trip-column");
+    const columns = document.querySelectorAll(".trip-column-x");
+    const columnsY = document.querySelectorAll(".trip-column");
     const scrollProgress = Math.min(
       scrolled / dimensionsRef.current.maxScroll,
       1
     );
 
     columns.forEach((column, index) => {
-      if (!filterButton && index % 2 !== 0) {
+      if (index % 2 !== 0) {
         {
           (column as HTMLElement).style.transform = `translateY(${
             -dimensionsRef.current.heightDiff * scrollProgress
-          }px)`;
+          }px) `;
         }
       }
-      if (filterButton && index === 1) {
-        (column as HTMLElement).style.transform = `translateY(${
-          -dimensionsRef.current.heightDiff * scrollProgress
-        }px) translateX(-200px)`;
+    });
+
+    columnsY.forEach((column, index) => {
+      if (filterButton && (index === 1 || index === 0)) {
+        (column as HTMLElement).style.transform = `translateX(-200px)`;
       }
-      if (filterButton && index === 3) {
-        (column as HTMLElement).style.transform = `translateY(${
-          -dimensionsRef.current.heightDiff * scrollProgress
-        }px) translateX(200px)`;
+      if (filterButton && (index === 3 || index === 2)) {
+        (column as HTMLElement).style.transform = `translateX(200px)`;
       }
     });
   };
@@ -143,5 +143,5 @@ export const useAutoScroll = (
         clearTimeout(resetScrollTimeout.current);
       }
     };
-  }, [filterButton]);
+  }, [filterButton, menuOpen]);
 };
