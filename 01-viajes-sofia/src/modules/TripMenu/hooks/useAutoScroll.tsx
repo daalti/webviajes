@@ -22,6 +22,8 @@ export const useAutoScroll = (
   // Calculate constants once on mount
   useLayoutEffect(() => {
     const viewportHeight = window.innerHeight;
+    console.log(viewportHeight);
+
     const columns = document.querySelectorAll(".trip-column");
     const container = document.querySelector(".trip-menu") as HTMLElement;
 
@@ -84,6 +86,8 @@ export const useAutoScroll = (
   };
 
   const handleScroll = (): void => {
+    console.log("handleScroll");
+    console.log(window.innerHeight);
     const scrolled = window.scrollY;
     const columns = document.querySelectorAll(".trip-column");
     const scrollProgress = Math.min(
@@ -91,7 +95,6 @@ export const useAutoScroll = (
       1
     );
 
-    console.log("filterButton " + filterButton);
     columns.forEach((column, index) => {
       if (!filterButton && index % 2 !== 0) {
         {
