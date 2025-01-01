@@ -17,3 +17,36 @@
   width: 30vw;
   transition: height 0.5s ease-in-out;
 }
+
+.trip-filter-menu-container ul {
+  list-style-type: none;
+  padding: 0; /* Optional: remove default padding */
+  margin: 0; /* Optional: remove default margin */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.trip-filter-menu-item {
+  list-style-type: none;
+}
+
+.trip-filter-menu-button {
+  background-color: white;
+  border: none;
+  font-size: calc(14px + 0.416667vw);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: auto;
+  gap: 100px;
+  text-align: left;
+  cursor: pointer;
+  font-family: "Funnel Display", serif;
+  font-weight: 500;
+}
+
+.trip-filter-menu-button span {
+  font-weight: 100;
+}
