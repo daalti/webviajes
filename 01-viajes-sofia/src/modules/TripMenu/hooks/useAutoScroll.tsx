@@ -1,24 +1,63 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useLayoutEffect } from "react";
 
-export const useAutoScroll = (menuOpen: boolean): void => {
+export const useAutoScroll = (
+  menuOpen: boolean,
+  filterButton: boolean
+): void => {
   const autoScrollRef = useRef<NodeJS.Timeout>();
   const isScrollingRef = useRef(false);
   const resetScrollTimeout = useRef<NodeJS.Timeout>();
   const isAutoScrolling = useRef(false);
   const initialAutoScroll = useRef(true);
 
+  // Store constant values
+  const dimensionsRef = useRef({
+    viewportHeight: 0,
+    tallHeight: 0,
+    shortHeight: 0,
+    heightDiff: 0,
+    maxScroll: 0,
+  });
+
+  // Calculate constants once on mount
+  useLayoutEffect(() => {
+    const viewportHeight = window.innerHeight;
+    const columns = document.querySelectorAll(".trip-column");
+    const container = document.querySelector(".trip-menu") as HTMLElement;
+
+    const tallColumns = Array.from(columns).filter(
+      (_, index) => index % 2 !== 0
+    );
+    const shortColumns = Array.from(columns).filter(
+      (_, index) => index % 2 === 0
+    );
+
+    const tallHeight = tallColumns[0].scrollHeight;
+    const shortHeight = shortColumns[0].scrollHeight;
+
+    dimensionsRef.current = {
+      viewportHeight,
+      tallHeight,
+      shortHeight,
+      heightDiff: tallHeight - shortHeight,
+      maxScroll: shortHeight - viewportHeight,
+    };
+
+    container.style.height = `${shortHeight}px`;
+  }, []);
+
   const startAutoScroll = (): void => {
-    console.log(menuOpen);
-    if (!isScrollingRef.current && !menuOpen) {
-      isAutoScrolling.current = true;
-      const scrollInterval = setInterval(() => {
-        window.scrollBy({
-          top: 1.15, // Reduced from 10 to 1 pixel
-          behavior: "smooth",
-        });
-      }, 20); // Reduced from 40 to 20ms for smoother motion
-      autoScrollRef.current = scrollInterval;
-    }
+    // If user is scrolling or menu/filter is open, do nothing
+    if (isScrollingRef.current || menuOpen || filterButton) return;
+
+    isAutoScrolling.current = true;
+    const scrollInterval = setInterval(() => {
+      window.scrollBy({
+        top: 1.15, // Reduced from 10 to 1 pixel
+        behavior: "smooth",
+      });
+    }, 20); // Reduced from 40 to 20ms for smoother motion
+    autoScrollRef.current = scrollInterval;
   };
 
   const stopAutoScroll = (): void => {
@@ -28,57 +67,57 @@ export const useAutoScroll = (menuOpen: boolean): void => {
     }
   };
 
-  useEffect(() => {
-    const handleUserInteraction = (): void => {
-      if (isAutoScrolling.current) {
-        isScrollingRef.current = true;
-        stopAutoScroll();
+  const handleUserInteraction = (): void => {
+    if (isAutoScrolling.current) {
+      isScrollingRef.current = true;
+      stopAutoScroll();
 
-        if (resetScrollTimeout.current) {
-          clearTimeout(resetScrollTimeout.current);
-        }
-
-        resetScrollTimeout.current = setTimeout(() => {
-          isScrollingRef.current = false;
-          startAutoScroll();
-        }, 5000);
-      }
-    };
-
-    const handleScroll = (): void => {
-      const scrolled = window.scrollY;
-      const viewportHeight = window.innerHeight;
-      const columns = document.querySelectorAll(".trip-column");
-      const container = document.querySelector(".trip-menu") as HTMLElement;
-
-      if (!isAutoScrolling.current) {
-        handleUserInteraction();
+      if (resetScrollTimeout.current) {
+        clearTimeout(resetScrollTimeout.current);
       }
 
-      const tallColumns = Array.from(columns).filter(
-        (_, index) => index % 2 !== 0
-      );
-      const shortColumns = Array.from(columns).filter(
-        (_, index) => index % 2 === 0
-      );
+      resetScrollTimeout.current = setTimeout(() => {
+        isScrollingRef.current = false;
+        startAutoScroll();
+      }, 5000);
+    }
+  };
 
-      const tallHeight = tallColumns[0].scrollHeight;
-      const shortHeight = shortColumns[0].scrollHeight;
-      const heightDiff = tallHeight - shortHeight;
+  const handleScroll = (): void => {
+    const scrolled = window.scrollY;
+    const columns = document.querySelectorAll(".trip-column");
+    const scrollProgress = Math.min(
+      scrolled / dimensionsRef.current.maxScroll,
+      1
+    );
 
-      container.style.height = `${shortHeight}px`;
-
-      const maxScroll = shortHeight - viewportHeight;
-      const scrollProgress = Math.min(scrolled / maxScroll, 1);
-
-      columns.forEach((column, index) => {
-        if (index % 2 !== 0) {
+    console.log("filterButton " + filterButton);
+    columns.forEach((column, index) => {
+      if (!filterButton && index % 2 !== 0) {
+        {
           (column as HTMLElement).style.transform = `translateY(${
-            -heightDiff * scrollProgress
+            -dimensionsRef.current.heightDiff * scrollProgress
           }px)`;
         }
-      });
-    };
+      }
+      if (filterButton && index === 1) {
+        (column as HTMLElement).style.transform = `translateY(${
+          -dimensionsRef.current.heightDiff * scrollProgress
+        }px) translateX(-200px)`;
+      }
+      if (filterButton && index === 3) {
+        (column as HTMLElement).style.transform = `translateY(${
+          -dimensionsRef.current.heightDiff * scrollProgress
+        }px) translateX(200px)`;
+      }
+    });
+  };
+
+  useEffect(() => {
+    if (filterButton) {
+      handleScroll();
+      stopAutoScroll();
+    }
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("wheel", handleUserInteraction);
@@ -95,10 +134,11 @@ export const useAutoScroll = (menuOpen: boolean): void => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("wheel", handleUserInteraction);
       window.removeEventListener("touchmove", handleUserInteraction);
+      window.removeEventListener("click", handleUserInteraction);
       stopAutoScroll();
       if (resetScrollTimeout.current) {
         clearTimeout(resetScrollTimeout.current);
       }
     };
-  }, []);
+  }, [filterButton]);
 };

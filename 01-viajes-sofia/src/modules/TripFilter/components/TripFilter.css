@@ -1,0 +1,31 @@
+.filter-button-wrapper {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.filter-button-container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  transition: height 0.5s ease-in-out;
+}
+
+.filter-button-container-open {
+  height: 10vh;
+}
+
+.filter-button {
+  transform: rotate(90deg);
+  background-color: white;
+  border: none;
+  z-index: 3;
+  cursor: pointer;
+  pointer-events: auto;
+  font-weight: 700;
+  font-size: 1.05rem;
+}

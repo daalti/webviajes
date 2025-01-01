@@ -1,0 +1,19 @@
+.trip-filter-menu-wrapper {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.trip-filter-menu-container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 30vw;
+  transition: height 0.5s ease-in-out;
+}

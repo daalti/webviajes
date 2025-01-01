@@ -1,16 +1,36 @@
+import "./TripFilter.css";
+import { TripFilterMenu } from "./TripFilterMenu";
+
 interface Props {
-  onChangeFilter: () => void;
-  filterOpen: boolean;
+  menuOpen: boolean;
+  filterButton: boolean;
+  setFilterButton: (value: boolean) => void;
 }
 
 export const TripFilter: React.FC<Props> = ({
-  onChangeFilter,
-  filterOpen,
+  menuOpen,
+  filterButton,
+  setFilterButton,
 }: Props) => {
   return (
-    <button
-      className={`trip-filter ${filterOpen ? "trip-filter-open" : ""}`}
-      onClick={onChangeFilter}
-    ></button>
+    <>
+      {!filterButton && (
+        <div className="filter-button-wrapper">
+          <div
+            className={`filter-button-container ${
+              menuOpen ? "filter-button-container-open" : ""
+            }`}
+          >
+            <button
+              className="filter-button"
+              onClick={() => setFilterButton(!filterButton)}
+            >
+              FILTER TRIP
+            </button>
+          </div>
+        </div>
+      )}
+      {filterButton && <TripFilterMenu />}
+    </>
   );
 };

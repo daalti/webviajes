@@ -1,6 +1,7 @@
-import { useState } from "react";
 import "./TripMenu.css";
 import { useAutoScroll } from "../hooks/useAutoScroll";
+import { TripFilter } from "../../TripFilter/components/TripFilter";
+import { useState } from "react";
 
 interface Image {
   src: string;
@@ -23,12 +24,15 @@ export const TripMenu: React.FC<Props> = ({
   menuOpen,
 }: Props) => {
   const [filterButton, setFilterButton] = useState(false);
-
-  useAutoScroll(menuOpen);
+  useAutoScroll(menuOpen, filterButton);
 
   return (
     <>
-      <section className={`trip-menu ${menuOpen ? "trip-menu-open" : ""}`}>
+      <section
+        className={`trip-menu ${menuOpen ? "trip-menu-open" : ""} ${
+          filterButton ? "trip-menu-filtered" : ""
+        }`}
+      >
         <div className="trip-column">
           {column1.map((img, index) => (
             <img
@@ -70,20 +74,11 @@ export const TripMenu: React.FC<Props> = ({
           ))}
         </div>
       </section>
-      <div className="filter-button-wrapper">
-        <div
-          className={`filter-button-container ${
-            menuOpen ? "filter-button-container-open" : ""
-          }`}
-        >
-          <button
-            className="filter-button"
-            onClick={() => setFilterButton(!filterButton)}
-          >
-            FILTER TRIP
-          </button>
-        </div>
-      </div>
+      <TripFilter
+        menuOpen={menuOpen}
+        filterButton={filterButton}
+        setFilterButton={setFilterButton}
+      />
     </>
   );
 };
