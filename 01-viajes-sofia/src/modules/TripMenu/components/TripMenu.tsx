@@ -1,7 +1,7 @@
 import "./TripMenu.css";
 import { useAutoScroll } from "../hooks/useAutoScroll";
 import { TripFilter } from "../../TripFilter/components/TripFilter";
-import { useState } from "react";
+import { useFilter } from "../context/filterButtonContext";
 
 interface Image {
   src: string;
@@ -23,15 +23,15 @@ export const TripMenu: React.FC<Props> = ({
   column4,
   menuOpen,
 }: Props) => {
-  const [filterButton, setFilterButton] = useState(false);
+  const { filterButton, setFilterButton } = useFilter();
   useAutoScroll(menuOpen, filterButton);
 
   return (
     <>
       <section
-        className={`trip-menu ${menuOpen ? "trip-menu-open" : ""} ${
-          filterButton ? "trip-menu-filtered" : ""
-        }`}
+        className={`trip-menu ${
+          menuOpen && !filterButton ? "trip-menu-open" : ""
+        } ${filterButton ? "trip-menu-filtered" : ""}`}
       >
         <div className="trip-column-x">
           <div className="trip-column">

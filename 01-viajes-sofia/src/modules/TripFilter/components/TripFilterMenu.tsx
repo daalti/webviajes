@@ -1,5 +1,4 @@
 import "./TripFilterMenu.css";
-
 const trips = [
   {
     id: 1,

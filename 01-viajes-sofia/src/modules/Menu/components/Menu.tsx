@@ -2,6 +2,7 @@ import "./Menu.css";
 import { MenuItem } from "./MenuItem";
 import { type MenuItemProp } from "./MenuItem";
 import { useState, useRef, useEffect } from "react";
+import { useFilter } from "../../TripMenu/context/filterButtonContext";
 
 type Props = {
   menuOpen: boolean;
@@ -11,6 +12,7 @@ export const Menu: React.FC<Props> = ({ menuOpen }: Props) => {
   const [offsetX, setOffsetX] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState(0);
+  const { filterButton } = useFilter();
 
   useEffect(() => {
     if (containerRef.current) {
@@ -87,7 +89,7 @@ export const Menu: React.FC<Props> = ({ menuOpen }: Props) => {
   ];
 
   return (
-    <nav className={`menu ${menuOpen ? "menu-open" : ""}`}>
+    <nav className={`menu ${menuOpen && !filterButton ? "menu-open" : ""}`}>
       <div
         ref={containerRef}
         onMouseMove={handleMouseMove}

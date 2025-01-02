@@ -1,4 +1,4 @@
-import { useEffect, useRef, useLayoutEffect } from "react";
+import { useEffect, useRef, useState, useLayoutEffect } from "react";
 
 export const useAutoScroll = (
   menuOpen: boolean,
@@ -9,6 +9,7 @@ export const useAutoScroll = (
   const resetScrollTimeout = useRef<NodeJS.Timeout>();
   const isAutoScrolling = useRef(false);
   const initialAutoScroll = useRef(true);
+  const [filterButtonStatus, setFilterButtonStatus] = useState(false);
 
   // Store constant values
   const dimensionsRef = useRef({
@@ -86,8 +87,6 @@ export const useAutoScroll = (
   };
 
   const handleScroll = (): void => {
-    console.log("handleScroll");
-    console.log(window.innerHeight);
     const scrolled = window.scrollY;
     const columns = document.querySelectorAll(".trip-column-x");
     const columnsY = document.querySelectorAll(".trip-column");
@@ -109,17 +108,27 @@ export const useAutoScroll = (
     columnsY.forEach((column, index) => {
       if (filterButton && (index === 1 || index === 0)) {
         (column as HTMLElement).style.transform = `translateX(-200px)`;
+      } else if (!filterButton && (index === 1 || index === 0)) {
+        (column as HTMLElement).style.transform = `translateX(0px)`;
       }
       if (filterButton && (index === 3 || index === 2)) {
         (column as HTMLElement).style.transform = `translateX(200px)`;
+      } else if (!filterButton && (index === 3 || index === 2)) {
+        (column as HTMLElement).style.transform = `translateX(0px)`;
       }
     });
   };
 
   useEffect(() => {
     if (filterButton) {
+      setFilterButtonStatus(true);
       handleScroll();
       stopAutoScroll();
+    }
+
+    if (!filterButton && filterButtonStatus) {
+      setFilterButtonStatus(false);
+      handleScroll();
     }
 
     window.addEventListener("scroll", handleScroll);
