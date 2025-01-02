@@ -11,7 +11,7 @@ interface Props {
 export const TripMenu: React.FC<Props> = ({ menuOpen }: Props) => {
   const { filterButton, setFilterButton } = useFilter();
   useAutoScroll(menuOpen, filterButton);
-  const { reorderedImages } = useTripFilter();
+  const { reorderedImages, isTransitioning } = useTripFilter();
 
   const column1 = reorderedImages.filter((_, index) => index % 4 === 0);
   const column2 = reorderedImages.filter((_, index) => index % 4 === 1);
@@ -24,7 +24,8 @@ export const TripMenu: React.FC<Props> = ({ menuOpen }: Props) => {
       <section
         className={`trip-menu ${
           menuOpen && !filterButton ? "trip-menu-open" : ""
-        } ${filterButton ? "trip-menu-filtered" : ""}`}
+        } ${filterButton ? "trip-menu-filtered" : ""}
+        ${isTransitioning ? "trip-menu-transition" : ""}`}
       >
         <div className="trip-column-x">
           <div className="trip-column">
