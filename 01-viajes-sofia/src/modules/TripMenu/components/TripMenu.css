@@ -40,3 +40,11 @@
   width: 100%;
   object-fit: cover;
 }
+
+.image-small-blur {
+  filter: blur(10px);
+}
+
+.image-large-blur {
+  filter: blur(10px);
+}

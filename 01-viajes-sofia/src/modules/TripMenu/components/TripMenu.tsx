@@ -2,29 +2,22 @@ import "./TripMenu.css";
 import { useAutoScroll } from "../hooks/useAutoScroll";
 import { TripFilter } from "../../TripFilter/components/TripFilter";
 import { useFilter } from "../context/filterButtonContext";
-
-interface Image {
-  src: string;
-  alt: string;
-}
+import { useTripFilter } from "../../TripFilter/context/TripFilterContext";
 
 interface Props {
-  column1: Image[];
-  column2: Image[];
-  column3: Image[];
-  column4: Image[];
   menuOpen: boolean;
 }
 
-export const TripMenu: React.FC<Props> = ({
-  column1,
-  column2,
-  column3,
-  column4,
-  menuOpen,
-}: Props) => {
+export const TripMenu: React.FC<Props> = ({ menuOpen }: Props) => {
   const { filterButton, setFilterButton } = useFilter();
   useAutoScroll(menuOpen, filterButton);
+  const { reorderedImages } = useTripFilter();
+
+  const column1 = reorderedImages.filter((_, index) => index % 4 === 0);
+  const column2 = reorderedImages.filter((_, index) => index % 4 === 1);
+  const column3 = reorderedImages.filter((_, index) => index % 4 === 2);
+  const column4 = reorderedImages.filter((_, index) => index % 4 === 3);
+  console.log(reorderedImages);
 
   return (
     <>
@@ -38,7 +31,9 @@ export const TripMenu: React.FC<Props> = ({
             {column1.map((img, index) => (
               <img
                 key={`col1-${index}`}
-                className="image-small"
+                className={`image-small ${
+                  !img.selected ? "image-small-blur" : ""
+                }`}
                 src={img.src}
                 alt={img.alt}
               />
@@ -50,7 +45,9 @@ export const TripMenu: React.FC<Props> = ({
             {column2.map((img, index) => (
               <img
                 key={`col2-${index}`}
-                className="image-large"
+                className={`image-large ${
+                  !img.selected ? "image-large-blur" : ""
+                }`}
                 src={img.src}
                 alt={img.alt}
               />
@@ -62,7 +59,9 @@ export const TripMenu: React.FC<Props> = ({
             {column3.map((img, index) => (
               <img
                 key={`col3-${index}`}
-                className="image-small"
+                className={`image-small ${
+                  !img.selected ? "image-small-blur" : ""
+                }`}
                 src={img.src}
                 alt={img.alt}
               />
@@ -74,7 +73,9 @@ export const TripMenu: React.FC<Props> = ({
             {column4.map((img, index) => (
               <img
                 key={`col4-${index}`}
-                className="image-large"
+                className={`image-large ${
+                  !img.selected ? "image-large-blur" : ""
+                }`}
                 src={img.src}
                 alt={img.alt}
               />
