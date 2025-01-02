@@ -40,6 +40,7 @@ export const TripFilterMenu: React.FC<Props> = ({ filterButton }: Props) => {
           : filter
       )
     );
+    window.scrollTo({ top: 0, behavior: "smooth" });
     console.log(filtersTitle);
   };
 
