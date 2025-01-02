@@ -56,8 +56,8 @@ export const TripFilterMenu: React.FC<Props> = ({ filterButton }: Props) => {
                 className="trip-filter-menu-button"
                 onClick={() => handlerFilterChange(trip.title)}
               >
-                <span>{trip.title}</span>
-                {trip.count}
+                <div>{trip.title}</div>
+                <div>{trip.count}</div>
               </button>
             </li>
           ))}

@@ -34,10 +34,14 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 60%;
 }
 
 .trip-filter-menu-item {
   list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 .trip-filter-menu-button {
@@ -47,15 +51,18 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  width: 100%;
   pointer-events: auto;
-  gap: 100px;
   text-align: left;
   cursor: pointer;
   font-family: "Funnel Display", serif;
-  font-weight: 500;
+  transition: color 0.3s ease-in-out;
 }
 
-.trip-filter-menu-button span {
+.trip-filter-menu-button div {
   font-weight: 100;
+}
+
+.trip-filter-menu-button:hover {
+  color: #3c4cc7;
 }
