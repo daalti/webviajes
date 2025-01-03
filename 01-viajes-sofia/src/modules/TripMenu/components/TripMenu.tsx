@@ -3,12 +3,22 @@ import { useAutoScroll } from "../hooks/useAutoScroll";
 import { TripFilter } from "../../TripFilter/components/TripFilter";
 import { useFilter } from "../context/filterButtonContext";
 import { useTripFilter } from "../../TripFilter/context/TripFilterContext";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   menuOpen: boolean;
 }
 
+interface Image {
+  id: number;
+  title: string;
+  src: string;
+  alt: string;
+  selected: boolean;
+}
+
 export const TripMenu: React.FC<Props> = ({ menuOpen }: Props) => {
+  const navigate = useNavigate();
   const { filterButton, setFilterButton } = useFilter();
   useAutoScroll(menuOpen, filterButton);
   const { reorderedImages, isTransitioning } = useTripFilter();
@@ -18,6 +28,15 @@ export const TripMenu: React.FC<Props> = ({ menuOpen }: Props) => {
   const column3 = reorderedImages.filter((_, index) => index % 4 === 2);
   const column4 = reorderedImages.filter((_, index) => index % 4 === 3);
   console.log(reorderedImages);
+
+  const handleImageClick = (img: Image): void => {
+    navigate(`/${img.title}`, {
+      state: {
+        image: img,
+        prevPath: window.location.pathname,
+      },
+    });
+  };
 
   return (
     <>
@@ -37,6 +56,7 @@ export const TripMenu: React.FC<Props> = ({ menuOpen }: Props) => {
                 }`}
                 src={img.src}
                 alt={img.alt}
+                onClick={() => handleImageClick(img)}
               />
             ))}
           </div>
@@ -51,6 +71,7 @@ export const TripMenu: React.FC<Props> = ({ menuOpen }: Props) => {
                 }`}
                 src={img.src}
                 alt={img.alt}
+                onClick={() => handleImageClick(img)}
               />
             ))}
           </div>
@@ -65,6 +86,7 @@ export const TripMenu: React.FC<Props> = ({ menuOpen }: Props) => {
                 }`}
                 src={img.src}
                 alt={img.alt}
+                onClick={() => handleImageClick(img)}
               />
             ))}
           </div>
@@ -79,6 +101,7 @@ export const TripMenu: React.FC<Props> = ({ menuOpen }: Props) => {
                 }`}
                 src={img.src}
                 alt={img.alt}
+                onClick={() => handleImageClick(img)}
               />
             ))}
           </div>
