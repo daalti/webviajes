@@ -2,7 +2,8 @@ import { useEffect, useRef, useState, useLayoutEffect } from "react";
 
 export const useAutoScroll = (
   menuOpen: boolean,
-  filterButton: boolean
+  filterButton: boolean,
+  isAutoScollStopped: boolean
 ): void => {
   const autoScrollRef = useRef<NodeJS.Timeout>();
   const isScrollingRef = useRef(false);
@@ -120,6 +121,10 @@ export const useAutoScroll = (
   };
 
   useEffect(() => {
+    if (isAutoScollStopped) {
+      stopAutoScroll();
+    }
+
     if (filterButton) {
       setFilterButtonStatus(true);
       handleScroll();
@@ -152,5 +157,5 @@ export const useAutoScroll = (
         clearTimeout(resetScrollTimeout.current);
       }
     };
-  }, [filterButton, menuOpen]);
+  }, [filterButton, menuOpen, isAutoScollStopped]);
 };
