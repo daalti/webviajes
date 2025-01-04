@@ -24,7 +24,6 @@ export const Menu: React.FC<Props> = ({ menuOpen }: Props) => {
   }, []);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>): void => {
-    console.log("handleMouseMove");
     // Current mouse position (in pixels from the left)
     const mouseX = e.clientX;
     // Screen width

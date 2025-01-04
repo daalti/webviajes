@@ -65,26 +65,22 @@ export const useAutoScroll = (
   };
 
   const stopAutoScroll = (): void => {
-    if (autoScrollRef.current) {
-      clearInterval(autoScrollRef.current);
-      isAutoScrolling.current = false;
-    }
+    clearInterval(autoScrollRef.current);
+    isAutoScrolling.current = false;
   };
 
   const handleUserInteraction = (): void => {
-    if (isAutoScrolling.current) {
-      isScrollingRef.current = true;
-      stopAutoScroll();
+    isScrollingRef.current = true;
+    stopAutoScroll();
 
-      if (resetScrollTimeout.current) {
-        clearTimeout(resetScrollTimeout.current);
-      }
-
-      resetScrollTimeout.current = setTimeout(() => {
-        isScrollingRef.current = false;
-        startAutoScroll();
-      }, 5000);
+    if (resetScrollTimeout.current) {
+      clearTimeout(resetScrollTimeout.current);
     }
+
+    resetScrollTimeout.current = setTimeout(() => {
+      isScrollingRef.current = false;
+      startAutoScroll();
+    }, 5000);
   };
 
   const handleScroll = (): void => {

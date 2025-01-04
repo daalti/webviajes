@@ -11,6 +11,7 @@ export const EgiptPage: FC = () => {
   const navigate = useNavigate();
 
   const handleMenuButtonClick = (): void => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     navigate(prevPath);
   };
 

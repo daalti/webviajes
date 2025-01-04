@@ -30,7 +30,7 @@ interface Filter {
 }
 
 export const TripFilterMenu: React.FC<Props> = ({ filterButton }: Props) => {
-  const { filtersTitle, setFiltersTitle } = useTripFilter();
+  const { setFiltersTitle } = useTripFilter();
 
   const handlerFilterChange = (title: string): void => {
     setFiltersTitle((prevFilters: Filter[]) =>
@@ -41,7 +41,6 @@ export const TripFilterMenu: React.FC<Props> = ({ filterButton }: Props) => {
       )
     );
     window.scrollTo({ top: 0, behavior: "smooth" });
-    console.log(filtersTitle);
   };
 
   return (

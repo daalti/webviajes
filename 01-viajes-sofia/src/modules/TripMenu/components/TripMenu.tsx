@@ -29,7 +29,6 @@ export const TripMenu: React.FC<Props> = ({ menuOpen }: Props) => {
   const column2 = reorderedImages.filter((_, index) => index % 4 === 1);
   const column3 = reorderedImages.filter((_, index) => index % 4 === 2);
   const column4 = reorderedImages.filter((_, index) => index % 4 === 3);
-  console.log(reorderedImages);
 
   const handleImageClick = (img: Image): void => {
     window.scrollTo({ top: 0, behavior: "smooth" });
