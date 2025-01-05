@@ -1,103 +1,602 @@
-{
-  "images": [
-    {
-      "src": "https://www.buildinamsterdam.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F158533%2F3000x2000%2F2df66c129a%2Fivypark-2020.jpg&w=640&q=80",
-      "alt": "Ivy Park",
-      "id": 1,
-      "title": "Aventuras naturaleza"
-    },
-    {
-      "src": "https://www.buildinamsterdam.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F158533%2F1667x2500%2F8423a27ac6%2Fxbionic-terraskin-trail-running.jpg&w=640&q=80",
-      "alt": "XBionic Trail",
-      "id": 2,
-      "title": "Egipto"
-    },
-    {
-      "src": "https://www.buildinamsterdam.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F158533%2F3525x2080%2F2fed1cd354%2Fakris-bag.jpg&w=640&q=80",
-      "alt": "Akris Bag",
-      "id": 4,
-      "title": "Marruecos"
-    },
-    {
-      "src": "https://www.buildinamsterdam.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F158533%2F1667x2500%2F0d04d36265%2Fxbionic-cycling.jpg&w=640&q=80",
-      "alt": "XBionic Cycling",
-      "id": 3,
-      "title": "Costa Brava"
-    },
-
-    {
-      "src": "https://www.buildinamsterdam.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F158533%2F4186x2628%2F1a34fbdae8%2Fbia-website_cover_desktop_suitsupply_2024.jpg&w=640&q=80",
-      "alt": "Suit Supply",
-      "id": 1,
-      "title": "Aventuras naturaleza"
-    },
-    {
-      "src": "https://www.buildinamsterdam.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F158533%2F1280x1919%2Fa3d8a518c2%2Fhibo-en-hani-from-somalia-foto-in-2019-gemaakt-in-kenia.webp&w=640&q=80",
-      "alt": "Hibo en Hani",
-      "id": 3,
-      "title": "Costa Brava"
-    },
-    {
-      "src": "https://www.buildinamsterdam.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F158533%2F5200x6500%2F2ce74aa9d0%2Felden-ring.jpg&w=640&q=80",
-      "alt": "Elden Ring",
-      "id": 3,
-      "title": "Costa Brava"
-    },
-    {
-      "src": "https://www.buildinamsterdam.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F158533%2F2827x2120%2F75f5634236%2Fbloom-wolf.jpeg&w=640&q=80",
-      "alt": "Bloom Wolf",
-      "id": 3,
-      "title": "Costa Brava"
-    },
-
-    {
-      "src": "https://www.buildinamsterdam.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F158533%2F3000x1860%2F46618c5c21%2Fpolaroid-cover.png&w=640&q=80",
-      "alt": "Polaroid",
-      "id": 1,
-      "title": "Aventuras naturaleza"
-    },
-    {
-      "src": "https://www.buildinamsterdam.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F158533%2F2624x3500%2Fc02a8355ce%2Froger-vivier-express-campaign.jpg&w=640&q=80",
-      "alt": "Roger Vivier",
-      "id": 3,
-      "title": "Costa Brava"
-    },
-    {
-      "src": "https://www.buildinamsterdam.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F158533%2F3500x2333%2F4e696c923d%2Frare-marriages-the-balvenie.jpg&w=640&q=80",
-      "alt": "The Balvenie",
-      "id": 3,
-      "title": "Costa Brava"
-    },
-    {
-      "src": "https://www.buildinamsterdam.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F158533%2F2399x3000%2F077f39e7c7%2Face-andtate-portrait.jpg&w=640&q=80",
-      "alt": "Ace and Tate",
-      "id": 2,
-      "title": "Egipto"
-    },
-
-    {
-      "src": "https://www.buildinamsterdam.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F158533%2F3000x1700%2F2f08e9f0a8%2Fland-of-ride-9.jpg&w=640&q=80",
-      "alt": "Land of Ride",
-      "id": 3,
-      "title": "Costa Brava"
-    },
-    {
-      "src": "https://www.buildinamsterdam.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F158533%2F2560x1707%2F9f78e6c0b7%2Fskiing_zermatt_fw20-21_0501_c-1-1-scaled.jpeg&w=640&q=80",
-      "alt": "Skiing Zermatt",
-      "id": 4,
-      "title": "Marruecos"
-    },
-    {
-      "src": "https://www.buildinamsterdam.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F158533%2F4500x2550%2F49ad9d4a3a%2Fbezier-reveal.jpg&w=640&q=80",
-      "alt": "Bezier",
-      "id": 3,
-      "title": "Costa Brava"
-    },
-    {
-      "src": "https://www.buildinamsterdam.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F158533%2F3000x1701%2F26fdc87df8%2Fcover.jpg&w=640&q=80",
-      "alt": "Cover",
-      "id": 4,
-      "title": "Marruecos"
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "src": "src/assets/data/Egipto/EVLK9726.webp",
+    "title": "EVLK9726",
+    "alt": "Imagen EVLK9726 de Egipto"
+  },
+  {
+    "id": 2,
+    "src": "src/assets/data/Egipto/FKMQ4609.webp",
+    "title": "FKMQ4609",
+    "alt": "Imagen FKMQ4609 de Egipto"
+  },
+  {
+    "id": 3,
+    "src": "src/assets/data/Egipto/GCBV9556.webp",
+    "title": "GCBV9556",
+    "alt": "Imagen GCBV9556 de Egipto"
+  },
+  {
+    "id": 4,
+    "src": "src/assets/data/Egipto/GLNB1472.webp",
+    "title": "GLNB1472",
+    "alt": "Imagen GLNB1472 de Egipto"
+  },
+  {
+    "id": 5,
+    "src": "src/assets/data/Egipto/HCSS0959.webp",
+    "title": "HCSS0959",
+    "alt": "Imagen HCSS0959 de Egipto"
+  },
+  {
+    "id": 6,
+    "src": "src/assets/data/Egipto/IAOA0293.webp",
+    "title": "IAOA0293",
+    "alt": "Imagen IAOA0293 de Egipto"
+  },
+  {
+    "id": 7,
+    "src": "src/assets/data/Egipto/ICYU5469.webp",
+    "title": "ICYU5469",
+    "alt": "Imagen ICYU5469 de Egipto"
+  },
+  {
+    "id": 8,
+    "src": "src/assets/data/Egipto/IEVF1803.webp",
+    "title": "IEVF1803",
+    "alt": "Imagen IEVF1803 de Egipto"
+  },
+  {
+    "id": 9,
+    "src": "src/assets/data/Egipto/IMG_1874.webp",
+    "title": "IMG_1874",
+    "alt": "Imagen IMG_1874 de Egipto"
+  },
+  {
+    "id": 10,
+    "src": "src/assets/data/Egipto/IMG_2489.webp",
+    "title": "IMG_2489",
+    "alt": "Imagen IMG_2489 de Egipto"
+  },
+  {
+    "id": 11,
+    "src": "src/assets/data/Egipto/IMG_2490.webp",
+    "title": "IMG_2490",
+    "alt": "Imagen IMG_2490 de Egipto"
+  },
+  {
+    "id": 12,
+    "src": "src/assets/data/Egipto/IMG_2530.webp",
+    "title": "IMG_2530",
+    "alt": "Imagen IMG_2530 de Egipto"
+  },
+  {
+    "id": 13,
+    "src": "src/assets/data/Egipto/IMG_4494.webp",
+    "title": "IMG_4494",
+    "alt": "Imagen IMG_4494 de Egipto"
+  },
+  {
+    "id": 14,
+    "src": "src/assets/data/Egipto/IMG_4495.webp",
+    "title": "IMG_4495",
+    "alt": "Imagen IMG_4495 de Egipto"
+  },
+  {
+    "id": 15,
+    "src": "src/assets/data/Egipto/IMG_4496.webp",
+    "title": "IMG_4496",
+    "alt": "Imagen IMG_4496 de Egipto"
+  },
+  {
+    "id": 16,
+    "src": "src/assets/data/Egipto/IMG_4497.webp",
+    "title": "IMG_4497",
+    "alt": "Imagen IMG_4497 de Egipto"
+  },
+  {
+    "id": 17,
+    "src": "src/assets/data/Egipto/IMG_4498.webp",
+    "title": "IMG_4498",
+    "alt": "Imagen IMG_4498 de Egipto"
+  },
+  {
+    "id": 18,
+    "src": "src/assets/data/Egipto/IMG_4500.webp",
+    "title": "IMG_4500",
+    "alt": "Imagen IMG_4500 de Egipto"
+  },
+  {
+    "id": 19,
+    "src": "src/assets/data/Egipto/IMG_4503.webp",
+    "title": "IMG_4503",
+    "alt": "Imagen IMG_4503 de Egipto"
+  },
+  {
+    "id": 20,
+    "src": "src/assets/data/Egipto/IMG_4505.webp",
+    "title": "IMG_4505",
+    "alt": "Imagen IMG_4505 de Egipto"
+  },
+  {
+    "id": 21,
+    "src": "src/assets/data/Egipto/IMG_4512.webp",
+    "title": "IMG_4512",
+    "alt": "Imagen IMG_4512 de Egipto"
+  },
+  {
+    "id": 22,
+    "src": "src/assets/data/Egipto/IMG_4514.webp",
+    "title": "IMG_4514",
+    "alt": "Imagen IMG_4514 de Egipto"
+  },
+  {
+    "id": 23,
+    "src": "src/assets/data/Egipto/IMG_4516.webp",
+    "title": "IMG_4516",
+    "alt": "Imagen IMG_4516 de Egipto"
+  },
+  {
+    "id": 24,
+    "src": "src/assets/data/Egipto/IMG_4517.webp",
+    "title": "IMG_4517",
+    "alt": "Imagen IMG_4517 de Egipto"
+  },
+  {
+    "id": 25,
+    "src": "src/assets/data/Egipto/IMG_4518.webp",
+    "title": "IMG_4518",
+    "alt": "Imagen IMG_4518 de Egipto"
+  },
+  {
+    "id": 26,
+    "src": "src/assets/data/Egipto/IMG_4521.webp",
+    "title": "IMG_4521",
+    "alt": "Imagen IMG_4521 de Egipto"
+  },
+  {
+    "id": 27,
+    "src": "src/assets/data/Egipto/IMG_4536.webp",
+    "title": "IMG_4536",
+    "alt": "Imagen IMG_4536 de Egipto"
+  },
+  {
+    "id": 28,
+    "src": "src/assets/data/Egipto/IMG_4540.webp",
+    "title": "IMG_4540",
+    "alt": "Imagen IMG_4540 de Egipto"
+  },
+  {
+    "id": 29,
+    "src": "src/assets/data/Egipto/IMG_4541.webp",
+    "title": "IMG_4541",
+    "alt": "Imagen IMG_4541 de Egipto"
+  },
+  {
+    "id": 30,
+    "src": "src/assets/data/Egipto/IMG_4542.webp",
+    "title": "IMG_4542",
+    "alt": "Imagen IMG_4542 de Egipto"
+  },
+  {
+    "id": 31,
+    "src": "src/assets/data/Egipto/IMG_4626.webp",
+    "title": "IMG_4626",
+    "alt": "Imagen IMG_4626 de Egipto"
+  },
+  {
+    "id": 32,
+    "src": "src/assets/data/Egipto/IMG_4627.webp",
+    "title": "IMG_4627",
+    "alt": "Imagen IMG_4627 de Egipto"
+  },
+  {
+    "id": 33,
+    "src": "src/assets/data/Egipto/IMG_4628.webp",
+    "title": "IMG_4628",
+    "alt": "Imagen IMG_4628 de Egipto"
+  },
+  {
+    "id": 34,
+    "src": "src/assets/data/Egipto/IMG_4629.webp",
+    "title": "IMG_4629",
+    "alt": "Imagen IMG_4629 de Egipto"
+  },
+  {
+    "id": 35,
+    "src": "src/assets/data/Egipto/IMG_4630.webp",
+    "title": "IMG_4630",
+    "alt": "Imagen IMG_4630 de Egipto"
+  },
+  {
+    "id": 36,
+    "src": "src/assets/data/Egipto/IMG_4634.webp",
+    "title": "IMG_4634",
+    "alt": "Imagen IMG_4634 de Egipto"
+  },
+  {
+    "id": 37,
+    "src": "src/assets/data/Egipto/IMG_4635.webp",
+    "title": "IMG_4635",
+    "alt": "Imagen IMG_4635 de Egipto"
+  },
+  {
+    "id": 38,
+    "src": "src/assets/data/Egipto/IMG_4637.webp",
+    "title": "IMG_4637",
+    "alt": "Imagen IMG_4637 de Egipto"
+  },
+  {
+    "id": 39,
+    "src": "src/assets/data/Egipto/IMG_4641.webp",
+    "title": "IMG_4641",
+    "alt": "Imagen IMG_4641 de Egipto"
+  },
+  {
+    "id": 40,
+    "src": "src/assets/data/Egipto/IMG_4653.webp",
+    "title": "IMG_4653",
+    "alt": "Imagen IMG_4653 de Egipto"
+  },
+  {
+    "id": 41,
+    "src": "src/assets/data/Egipto/IMG_4654.webp",
+    "title": "IMG_4654",
+    "alt": "Imagen IMG_4654 de Egipto"
+  },
+  {
+    "id": 42,
+    "src": "src/assets/data/Egipto/IMG_4655.webp",
+    "title": "IMG_4655",
+    "alt": "Imagen IMG_4655 de Egipto"
+  },
+  {
+    "id": 43,
+    "src": "src/assets/data/Egipto/IMG_4656.webp",
+    "title": "IMG_4656",
+    "alt": "Imagen IMG_4656 de Egipto"
+  },
+  {
+    "id": 44,
+    "src": "src/assets/data/Egipto/IMG_4661.webp",
+    "title": "IMG_4661",
+    "alt": "Imagen IMG_4661 de Egipto"
+  },
+  {
+    "id": 45,
+    "src": "src/assets/data/Egipto/IMG_4667.webp",
+    "title": "IMG_4667",
+    "alt": "Imagen IMG_4667 de Egipto"
+  },
+  {
+    "id": 46,
+    "src": "src/assets/data/Egipto/IMG_4669.webp",
+    "title": "IMG_4669",
+    "alt": "Imagen IMG_4669 de Egipto"
+  },
+  {
+    "id": 47,
+    "src": "src/assets/data/Egipto/IMG_4674.webp",
+    "title": "IMG_4674",
+    "alt": "Imagen IMG_4674 de Egipto"
+  },
+  {
+    "id": 48,
+    "src": "src/assets/data/Egipto/IMG_4675.webp",
+    "title": "IMG_4675",
+    "alt": "Imagen IMG_4675 de Egipto"
+  },
+  {
+    "id": 49,
+    "src": "src/assets/data/Egipto/IMG_4677.webp",
+    "title": "IMG_4677",
+    "alt": "Imagen IMG_4677 de Egipto"
+  },
+  {
+    "id": 50,
+    "src": "src/assets/data/Egipto/IMG_4682.webp",
+    "title": "IMG_4682",
+    "alt": "Imagen IMG_4682 de Egipto"
+  },
+  {
+    "id": 51,
+    "src": "src/assets/data/Egipto/IMG_4691.webp",
+    "title": "IMG_4691",
+    "alt": "Imagen IMG_4691 de Egipto"
+  },
+  {
+    "id": 52,
+    "src": "src/assets/data/Egipto/IMG_4698.webp",
+    "title": "IMG_4698",
+    "alt": "Imagen IMG_4698 de Egipto"
+  },
+  {
+    "id": 53,
+    "src": "src/assets/data/Egipto/IMG_4701.webp",
+    "title": "IMG_4701",
+    "alt": "Imagen IMG_4701 de Egipto"
+  },
+  {
+    "id": 54,
+    "src": "src/assets/data/Egipto/IMG_4717.webp",
+    "title": "IMG_4717",
+    "alt": "Imagen IMG_4717 de Egipto"
+  },
+  {
+    "id": 55,
+    "src": "src/assets/data/Egipto/IMG_4718.webp",
+    "title": "IMG_4718",
+    "alt": "Imagen IMG_4718 de Egipto"
+  },
+  {
+    "id": 56,
+    "src": "src/assets/data/Egipto/IMG_4737.webp",
+    "title": "IMG_4737",
+    "alt": "Imagen IMG_4737 de Egipto"
+  },
+  {
+    "id": 57,
+    "src": "src/assets/data/Egipto/IMG_4740.webp",
+    "title": "IMG_4740",
+    "alt": "Imagen IMG_4740 de Egipto"
+  },
+  {
+    "id": 58,
+    "src": "src/assets/data/Egipto/IMG_4742.webp",
+    "title": "IMG_4742",
+    "alt": "Imagen IMG_4742 de Egipto"
+  },
+  {
+    "id": 59,
+    "src": "src/assets/data/Egipto/IMG_4743.webp",
+    "title": "IMG_4743",
+    "alt": "Imagen IMG_4743 de Egipto"
+  },
+  {
+    "id": 60,
+    "src": "src/assets/data/Egipto/IMG_4744.webp",
+    "title": "IMG_4744",
+    "alt": "Imagen IMG_4744 de Egipto"
+  },
+  {
+    "id": 61,
+    "src": "src/assets/data/Egipto/IMG_4745.webp",
+    "title": "IMG_4745",
+    "alt": "Imagen IMG_4745 de Egipto"
+  },
+  {
+    "id": 62,
+    "src": "src/assets/data/Egipto/IMG_4747.webp",
+    "title": "IMG_4747",
+    "alt": "Imagen IMG_4747 de Egipto"
+  },
+  {
+    "id": 63,
+    "src": "src/assets/data/Egipto/IMG_4748.webp",
+    "title": "IMG_4748",
+    "alt": "Imagen IMG_4748 de Egipto"
+  },
+  {
+    "id": 64,
+    "src": "src/assets/data/Egipto/IMG_4757.webp",
+    "title": "IMG_4757",
+    "alt": "Imagen IMG_4757 de Egipto"
+  },
+  {
+    "id": 65,
+    "src": "src/assets/data/Egipto/IMG_4770.webp",
+    "title": "IMG_4770",
+    "alt": "Imagen IMG_4770 de Egipto"
+  },
+  {
+    "id": 66,
+    "src": "src/assets/data/Egipto/IMG_4785.webp",
+    "title": "IMG_4785",
+    "alt": "Imagen IMG_4785 de Egipto"
+  },
+  {
+    "id": 67,
+    "src": "src/assets/data/Egipto/IMG_4797.webp",
+    "title": "IMG_4797",
+    "alt": "Imagen IMG_4797 de Egipto"
+  },
+  {
+    "id": 68,
+    "src": "src/assets/data/Egipto/IMG_5412.webp",
+    "title": "IMG_5412",
+    "alt": "Imagen IMG_5412 de Egipto"
+  },
+  {
+    "id": 69,
+    "src": "src/assets/data/Egipto/IMG_5416.webp",
+    "title": "IMG_5416",
+    "alt": "Imagen IMG_5416 de Egipto"
+  },
+  {
+    "id": 70,
+    "src": "src/assets/data/Egipto/IMG_5426.webp",
+    "title": "IMG_5426",
+    "alt": "Imagen IMG_5426 de Egipto"
+  },
+  {
+    "id": 71,
+    "src": "src/assets/data/Egipto/IMG_5434.webp",
+    "title": "IMG_5434",
+    "alt": "Imagen IMG_5434 de Egipto"
+  },
+  {
+    "id": 72,
+    "src": "src/assets/data/Egipto/IMG_5435.webp",
+    "title": "IMG_5435",
+    "alt": "Imagen IMG_5435 de Egipto"
+  },
+  {
+    "id": 73,
+    "src": "src/assets/data/Egipto/IMG_5436.webp",
+    "title": "IMG_5436",
+    "alt": "Imagen IMG_5436 de Egipto"
+  },
+  {
+    "id": 74,
+    "src": "src/assets/data/Egipto/IMG_5453.webp",
+    "title": "IMG_5453",
+    "alt": "Imagen IMG_5453 de Egipto"
+  },
+  {
+    "id": 75,
+    "src": "src/assets/data/Egipto/IMG_5460.webp",
+    "title": "IMG_5460",
+    "alt": "Imagen IMG_5460 de Egipto"
+  },
+  {
+    "id": 76,
+    "src": "src/assets/data/Egipto/IMG_5462.webp",
+    "title": "IMG_5462",
+    "alt": "Imagen IMG_5462 de Egipto"
+  },
+  {
+    "id": 77,
+    "src": "src/assets/data/Egipto/IMG_5464.webp",
+    "title": "IMG_5464",
+    "alt": "Imagen IMG_5464 de Egipto"
+  },
+  {
+    "id": 78,
+    "src": "src/assets/data/Egipto/IMG_5465.webp",
+    "title": "IMG_5465",
+    "alt": "Imagen IMG_5465 de Egipto"
+  },
+  {
+    "id": 79,
+    "src": "src/assets/data/Egipto/IMG_5474.webp",
+    "title": "IMG_5474",
+    "alt": "Imagen IMG_5474 de Egipto"
+  },
+  {
+    "id": 80,
+    "src": "src/assets/data/Egipto/IMG_5499.webp",
+    "title": "IMG_5499",
+    "alt": "Imagen IMG_5499 de Egipto"
+  },
+  {
+    "id": 81,
+    "src": "src/assets/data/Egipto/IMG_5525.webp",
+    "title": "IMG_5525",
+    "alt": "Imagen IMG_5525 de Egipto"
+  },
+  {
+    "id": 82,
+    "src": "src/assets/data/Egipto/IMG_5528.webp",
+    "title": "IMG_5528",
+    "alt": "Imagen IMG_5528 de Egipto"
+  },
+  {
+    "id": 83,
+    "src": "src/assets/data/Egipto/IMG_5530.webp",
+    "title": "IMG_5530",
+    "alt": "Imagen IMG_5530 de Egipto"
+  },
+  {
+    "id": 84,
+    "src": "src/assets/data/Egipto/IMG_5532.webp",
+    "title": "IMG_5532",
+    "alt": "Imagen IMG_5532 de Egipto"
+  },
+  {
+    "id": 85,
+    "src": "src/assets/data/Egipto/IMG_5549.webp",
+    "title": "IMG_5549",
+    "alt": "Imagen IMG_5549 de Egipto"
+  },
+  {
+    "id": 86,
+    "src": "src/assets/data/Egipto/IMG_5553.webp",
+    "title": "IMG_5553",
+    "alt": "Imagen IMG_5553 de Egipto"
+  },
+  {
+    "id": 87,
+    "src": "src/assets/data/Egipto/IMG_5556.webp",
+    "title": "IMG_5556",
+    "alt": "Imagen IMG_5556 de Egipto"
+  },
+  {
+    "id": 88,
+    "src": "src/assets/data/Egipto/IMG_5561.webp",
+    "title": "IMG_5561",
+    "alt": "Imagen IMG_5561 de Egipto"
+  },
+  {
+    "id": 89,
+    "src": "src/assets/data/Egipto/IMG_5563.webp",
+    "title": "IMG_5563",
+    "alt": "Imagen IMG_5563 de Egipto"
+  },
+  {
+    "id": 90,
+    "src": "src/assets/data/Egipto/IMG_5564.webp",
+    "title": "IMG_5564",
+    "alt": "Imagen IMG_5564 de Egipto"
+  },
+  {
+    "id": 91,
+    "src": "src/assets/data/Egipto/IMG_5566.webp",
+    "title": "IMG_5566",
+    "alt": "Imagen IMG_5566 de Egipto"
+  },
+  {
+    "id": 92,
+    "src": "src/assets/data/Egipto/IMG_5582.webp",
+    "title": "IMG_5582",
+    "alt": "Imagen IMG_5582 de Egipto"
+  },
+  {
+    "id": 93,
+    "src": "src/assets/data/Egipto/IMG_5586.webp",
+    "title": "IMG_5586",
+    "alt": "Imagen IMG_5586 de Egipto"
+  },
+  {
+    "id": 94,
+    "src": "src/assets/data/Egipto/IMG_5588.webp",
+    "title": "IMG_5588",
+    "alt": "Imagen IMG_5588 de Egipto"
+  },
+  {
+    "id": 95,
+    "src": "src/assets/data/Egipto/IMG_8654.webp",
+    "title": "IMG_8654",
+    "alt": "Imagen IMG_8654 de Egipto"
+  },
+  {
+    "id": 96,
+    "src": "src/assets/data/Egipto/IMG_8669.webp",
+    "title": "IMG_8669",
+    "alt": "Imagen IMG_8669 de Egipto"
+  },
+  {
+    "id": 97,
+    "src": "src/assets/data/Egipto/IMG_8670.webp",
+    "title": "IMG_8670",
+    "alt": "Imagen IMG_8670 de Egipto"
+  },
+  {
+    "id": 98,
+    "src": "src/assets/data/Egipto/IMG_E4517.webp",
+    "title": "IMG_E4517",
+    "alt": "Imagen IMG_E4517 de Egipto"
+  },
+  {
+    "id": 99,
+    "src": "src/assets/data/Egipto/IMG_E4626.webp",
+    "title": "IMG_E4626",
+    "alt": "Imagen IMG_E4626 de Egipto"
+  },
+  {
+    "id": 100,
+    "src": "src/assets/data/Egipto/IMG_E5667.webp",
+    "title": "IMG_E5667",
+    "alt": "Imagen IMG_E5667 de Egipto"
+  }
+]
