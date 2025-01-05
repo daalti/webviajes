@@ -5,6 +5,7 @@ import { useFilter } from "../context/filterButtonContext";
 import { useTripFilter } from "../../TripFilter/context/TripFilterContext";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { ColumnTripMenu } from "./ColumnTripMenu";
 
 interface Props {
   menuOpen: boolean;
@@ -25,11 +26,6 @@ export const TripMenu: React.FC<Props> = ({ menuOpen }: Props) => {
   useAutoScroll(menuOpen, filterButton, isAutoScollStopped);
   const { reorderedImages, isTransitioning } = useTripFilter();
 
-  const column1 = reorderedImages.filter((_, index) => index % 4 === 0);
-  const column2 = reorderedImages.filter((_, index) => index % 4 === 1);
-  const column3 = reorderedImages.filter((_, index) => index % 4 === 2);
-  const column4 = reorderedImages.filter((_, index) => index % 4 === 3);
-
   const handleImageClick = (img: Image): void => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setIsAutoScollStopped(true);
@@ -49,66 +45,10 @@ export const TripMenu: React.FC<Props> = ({ menuOpen }: Props) => {
         } ${filterButton ? "trip-menu-filtered" : ""}
         ${isTransitioning ? "trip-menu-transition" : ""}`}
       >
-        <div className="trip-column-x">
-          <div className="trip-column">
-            {column1.map((img, index) => (
-              <img
-                key={`col1-${index}`}
-                className={`image-small ${
-                  !img.selected ? "image-small-blur" : ""
-                }`}
-                src={img.src}
-                alt={img.alt}
-                onClick={() => handleImageClick(img)}
-              />
-            ))}
-          </div>
-        </div>
-        <div className="trip-column-x">
-          <div className="trip-column">
-            {column2.map((img, index) => (
-              <img
-                key={`col2-${index}`}
-                className={`image-large ${
-                  !img.selected ? "image-large-blur" : ""
-                }`}
-                src={img.src}
-                alt={img.alt}
-                onClick={() => handleImageClick(img)}
-              />
-            ))}
-          </div>
-        </div>
-        <div className="trip-column-x">
-          <div className="trip-column">
-            {column3.map((img, index) => (
-              <img
-                key={`col3-${index}`}
-                className={`image-small ${
-                  !img.selected ? "image-small-blur" : ""
-                }`}
-                src={img.src}
-                alt={img.alt}
-                onClick={() => handleImageClick(img)}
-              />
-            ))}
-          </div>
-        </div>
-        <div className="trip-column-x">
-          <div className="trip-column">
-            {column4.map((img, index) => (
-              <img
-                key={`col4-${index}`}
-                className={`image-large ${
-                  !img.selected ? "image-large-blur" : ""
-                }`}
-                src={img.src}
-                alt={img.alt}
-                onClick={() => handleImageClick(img)}
-              />
-            ))}
-          </div>
-        </div>
+        <ColumnTripMenu
+          reorderedImages={reorderedImages}
+          handleImageClick={handleImageClick}
+        />
       </section>
       <TripFilter
         menuOpen={menuOpen}
