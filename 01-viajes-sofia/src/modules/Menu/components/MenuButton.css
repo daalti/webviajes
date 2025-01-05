@@ -10,7 +10,7 @@
   background-color: #c38133;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-out, background-color 0.5s ease-in-out;
-  z-index: 2;
+  z-index: 9999;
 }
 
 .menu-button:hover {

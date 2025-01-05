@@ -26,15 +26,45 @@ export const TripMenu: React.FC<Props> = ({ menuOpen }: Props) => {
   useAutoScroll(menuOpen, filterButton, isAutoScollStopped);
   const { reorderedImages, isTransitioning } = useTripFilter();
 
-  const handleImageClick = (img: Image): void => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  const [clonedImage, setClonedImage] = useState<string | null>(null);
+  const [isFullScreen, setIsFullScreen] = useState(false);
+  const [position, setPosition] = useState({
+    top: 0,
+    left: 0,
+    width: 0,
+    height: 0,
+  });
+
+  const handleImageClick = (
+    img: Image,
+    e: React.MouseEvent<HTMLImageElement>
+  ): void => {
     setIsAutoScollStopped(true);
-    navigate(`/${img.title}`, {
-      state: {
-        image: img,
-        prevPath: window.location.pathname,
-      },
+    const rect = e.currentTarget.getBoundingClientRect();
+    setPosition({
+      top: rect.top,
+      left: rect.left,
+      width: rect.width,
+      height: rect.height,
     });
+    setClonedImage(img.src);
+
+    setTimeout(() => {
+      setIsFullScreen(true);
+    }, 500);
+
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 1000);
+
+    setTimeout(() => {
+      navigate(`/${img.title}`, {
+        state: {
+          image: img,
+          prevPath: window.location.pathname,
+        },
+      });
+    }, 1200);
   };
 
   return (
@@ -49,6 +79,33 @@ export const TripMenu: React.FC<Props> = ({ menuOpen }: Props) => {
           reorderedImages={reorderedImages}
           handleImageClick={handleImageClick}
         />
+        {clonedImage && (
+          <img
+            src={clonedImage}
+            alt="Cloned view"
+            className="image-clone"
+            onClick={() => setClonedImage(null)}
+            style={{
+              position: "fixed",
+              top: `${position.top}px`,
+              left: `${position.left}px`,
+              width: `${position.width}px`,
+              height: `${position.height}px`,
+              ...(isFullScreen && {
+                transform: `
+                  translate(
+                    calc(50vw - ${position.left}px - ${position.width / 2}px),
+                    calc(50vh - ${position.top}px - ${position.height / 2}px)
+                  )
+                  scale(${Math.max(
+                    window.innerWidth / position.width,
+                    window.innerHeight / position.height
+                  )})
+                `,
+              }),
+            }}
+          />
+        )}
       </section>
       <TripFilter
         menuOpen={menuOpen}

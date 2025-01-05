@@ -10,7 +10,7 @@ interface Image {
 
 interface Props {
   reorderedImages: Image[];
-  handleImageClick: (img: Image) => void;
+  handleImageClick: (img: Image, e: React.MouseEvent<HTMLImageElement>) => void;
 }
 
 export const ColumnTripMenu: React.FC<Props> = ({
@@ -40,7 +40,7 @@ export const ColumnTripMenu: React.FC<Props> = ({
                   }`}
                   src={img.src}
                   alt={img.alt}
-                  onClick={() => handleImageClick(img)}
+                  onClick={(e) => handleImageClick(img, e)}
                 />
               ))}
           </div>
